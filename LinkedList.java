@@ -1,19 +1,12 @@
 /*
-
  Group Members:
-
-
  Algorithms and Data Structures
  Section CH 
  Project 3 - Dijkstra's Algorithm 
-
-
-
-
  */
 package dijkstra;
 
-public class Path {
+public class LinkedList {
      // declare
     private Vertex head;
     int neighbor;
@@ -28,21 +21,21 @@ public class Path {
         this.distance = distance;
     }
 
-    public Path() {
+    public LinkedList() {
     }
 
-    public Path(int length) {
+    public LinkedList(int length) {
         this.length = length;
     }
     
     
     
 
-    public void insert(String label) {
+    public void insert(char label) {
         head = insert(head, label);
     }
 
-    private Vertex insert(Vertex head,String label) {
+    private Vertex insert(Vertex head,char label) {
 
         // if the path is empty 
         // we insert in the beginning
@@ -77,7 +70,7 @@ public class Path {
 
         while (helpPtr != null) {
             // print the data of the helpPtr
-            System.out.print(helpPtr.getLabel() + " ");
+            System.out.print(helpPtr.getLabel() + " -> ");
             // Step one node over
             helpPtr = helpPtr.getNext();
         }
